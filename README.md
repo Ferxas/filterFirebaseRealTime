@@ -1,6 +1,6 @@
-# roger_project
+# Firebase Realtime Connect With Flutter
 
-A new Flutter project.
+Flutter project using Firebase Realtime
 
 ## Getting Started
 
