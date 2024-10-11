@@ -1,12 +1,12 @@
-import 'package:roger_project/model/alumnos.dart';
 import 'package:flutter/material.dart';
+import 'package:roger_project/model/alumnos.dart';
 
 class BoxWidget extends StatelessWidget {
   final Alumno estudiante;
   final Function(Alumno) onEdit;
-  final Function(Alumno) onDelete;
+  final Function(String?) onDelete;
 
-  BoxWidget({
+  const BoxWidget({
     Key? key,
     required this.estudiante,
     required this.onEdit,
@@ -18,22 +18,32 @@ class BoxWidget extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(15),
       padding: EdgeInsets.all(25),
-      color: Colors.cyan.shade600,
+      decoration: BoxDecoration(
+        color: Colors.cyan,
+        borderRadius: BorderRadius.circular(10),
+      ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(estudiante.name),
-          Text(estudiante.lastname),
-          Text('${estudiante.age}'),
+          Text('${estudiante.name} ${estudiante.lastname}',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          Text('Edad: ${estudiante.age}', style: TextStyle(fontSize: 16)),
+          Text('Rol: ${estudiante.role}', style: TextStyle(fontSize: 16)),
+          Text('Género: ${estudiante.gender}', style: TextStyle(fontSize: 16)),
+          SizedBox(height: 10),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               IconButton(
-                  icon: Icon(Icons.edit), onPressed: () => onEdit(estudiante)),
+                icon: Icon(Icons.edit),
+                onPressed: () => onEdit(estudiante),
+              ),
               IconButton(
-                  icon: Icon(Icons.delete),
-                  onPressed: () => onDelete(estudiante)),
+                icon: Icon(Icons.delete),
+                onPressed: () => onDelete(estudiante.id),
+              ),
             ],
-          )
+          ),
         ],
       ),
     );

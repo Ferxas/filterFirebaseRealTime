@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class Alumno {
   String? id;
   String name;
@@ -17,14 +15,14 @@ class Alumno {
     required this.age,
   });
 
-  factory Alumno.fromMap(Map<dynamic, dynamic> map, String id) {
+  factory Alumno.fromMap(Map<dynamic, dynamic> map, String key) {
     return Alumno(
-      id: id,
+      id: key,
       name: map['name'] as String? ?? '',
       lastname: map['lastname'] as String? ?? '',
       gender: map['gender'] as String? ?? '',
       role: map['role'] as String? ?? '',
-      age: map['age'] as int? ?? 0,
+      age: (map['age'] as int?) ?? 0,
     );
   }
 

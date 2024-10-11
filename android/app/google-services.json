@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "256818174928",
+    "project_id": "roger-flutter",
+    "storage_bucket": "roger-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256818174928:android:18397329d3bce565cbb7d5",
+        "android_client_info": {
+          "package_name": "com.roger"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY8HBbW9zjxFvJc69sBACHc40t3XfexUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
