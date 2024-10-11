@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roger_project/model/alumnos.dart';
+import 'package:roger/model/alumnos.dart';
 
 class BoxWidget extends StatelessWidget {
   final Alumno estudiante;

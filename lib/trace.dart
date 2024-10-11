@@ -1,6 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
-import 'package:roger_project/model/alumnos.dart';
-import 'package:roger_project/widgets/box_widget.dart';
+import 'package:roger/model/alumnos.dart';
+import 'package:roger/widgets/box_widget.dart';
 import 'package:flutter/material.dart';
 
 class TraceScreen extends StatefulWidget {
